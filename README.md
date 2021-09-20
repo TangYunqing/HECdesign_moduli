@@ -15,8 +15,14 @@ Step 5: Screening ceramics with desired properties from the machine-learning pre
 
 # Inputs and Outputs
 
-The inputs are three bond parameters (average values in a unit cell): the sum of bond order contributed by atoms in a bond, the bond length and the net charge of a cation. In the uploaded data and codes, the three predictors are named as SBO, BL and NETM respectivly.
+The inputs are three bond parameters (average values in a unit cell): the sum of bond order contributed by atoms in a bond, the bond length and the net charge of a cation. In the uploaded data and code, the three predictors are named as SBO, BL and NETM respectively.
 
-The outputs are mecahncial properties of bulk, shear and Young's moduli. In the uploaded data and codes, the three mecahncial properties are named as B, G and E respectivly.
+The outputs are mechanical properties of bulk, shear and Young's moduli. In the uploaded data and code, the three mechanical properties are named as B, G and E respectively.
 
-# Training codes
+# Training models
+
+The training code for ML models for bulk, shear and Young's moduli are named as trainModelB.m, trainModelG.m and trainModelE.m respectively. To train a model for the prediction of a mechancial property, e.g. Young's modulus, you can sent the command "[ModelE, validationRMSE] = trainModelE(trainingData)". The output RMSE is a 10-fold cross-validation result, and the output file "ModelE" is the ML prediction model for Young's modulus. The trainingData is the DFT dataset or its subset, which can be found in the "examples" folder.
+
+# Using prediction models
+
+To use the traned ML model to predict a mechancial property, e.g. Young's modulus, you can use the command "fitE = ModelE.predictFcn(predictioninputs)". The predicted results are stored in the output file "fitE". The prediction inputs for multi-element ceramics are provided in the "examples" folder.
