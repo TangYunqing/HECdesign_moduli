@@ -25,4 +25,4 @@ The training code for ML models for bulk, shear and Young's moduli are named as 
 
 # Using prediction models
 
-To use the traned ML model to predict a mechancial property, e.g. Young's modulus, you can use the command "fitE = ModelE.predictFcn(predictioninputs)". The predicted results are stored in the output file "fitE". The prediction inputs for multi-element ceramics are provided in the "examples" folder.
+To use the traned ML model to predict a mechancial property, e.g. Young's modulus, you can use the command "fitE = ModelE.predictFcn(predictioninputs)". The predicted results are stored in the output file "fitE". The prediction inputs for multi-element rock-salt ceramics are provided in the "examples" folder.
